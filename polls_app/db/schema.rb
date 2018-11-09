@@ -41,10 +41,10 @@ ActiveRecord::Schema.define(version: 20181108232803) do
 
   create_table "responses", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "question_id", null: false
+    t.integer "answer_choice_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["question_id"], name: "index_responses_on_question_id"
+    t.index ["answer_choice_id"], name: "index_responses_on_answer_choice_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
